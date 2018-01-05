@@ -1,0 +1,34 @@
+<div>
+  <h1>Nuevo cliente</h1>
+  <form name="cForm" novalidate>
+    <p>
+      <label>Nombre:
+        <input type="text" name="name" ng-model="$ctrl.client.name" required="" />
+      </label>
+      <ng-messages for="cForm.name.$error" role="alert" ng-show="cForm.name.$dirty && cForm.name.$touched">
+        <ng-message when="required">Por favor, ingrese el nombre del nuevo cliente.</ng-message>
+      </ng-messages>
+    </p>
+    <p>
+      <label>Edad:
+        <input type="number" name="age" ng-model="$ctrl.client.age" required="" ng-pattern="/^-?[0-9][^\.]*$/" />
+      </label>
+      <ng-messages for="cForm.age.$error" role="alert" ng-show="cForm.age.$dirty && cForm.age.$touched">
+        <ng-message when="required">Por favor, ingrese la edad del nuevo cliente.</ng-message>
+        <ng-message when="pattern">Por favor, ingrese un número entero para la edad del nuevo cliente.</ng-message>
+      </ng-messages>
+    </p>
+    <p>
+      <label>Email:
+        <input type="email" name="email" ng-model="$ctrl.client.email" required="" />
+      </label>
+      <ng-messages for="cForm.email.$error" role="alert" ng-show="cForm.email.$dirty && cForm.email.$touched">
+        <ng-message when="required">Por favor, ingrese el email del nuevo cliente.</ng-message>
+        <ng-message when="email">Por favor, ingrese un email válido para el nuevo cliente.</ng-message>
+      </ng-messages>
+    </p>
+    <p>
+      <input type="submit" value="Guardar nuevo cliente" ng-click="$ctrl.saveNewClient()">
+    </p>
+  </form>
+</div>
