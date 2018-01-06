@@ -17,7 +17,16 @@ class CFormController {
 
     this.newClientHandler({ client: Object.assign({}, this.client) });
 
+    this.resetForm();
+  }
+
+  resetForm() {
     this.client = Object.assign(this.client, this.defaultForm);
+
+    Object.keys(this.client).forEach(key => {
+      this.$scope.cForm[key].$setPristine();
+      this.$scope.cForm[key].$setUntouched();
+    });
   }
 }
 

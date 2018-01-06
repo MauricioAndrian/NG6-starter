@@ -5,7 +5,8 @@ import './cTable.scss';
 const cTableComponent = {
   restrict: 'E',
   bindings: {
-    clients: '<'
+    clients: '<',
+    deleteClient: '&'
   },
   template,
   controller,

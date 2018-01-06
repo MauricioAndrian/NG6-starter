@@ -1,6 +1,25 @@
-<div>
-  <h1>Clientes</h1>
-  <ul>
-    <li ng-repeat="client in $ctrl.clients">{{ client.name }}</li>
-  </ul>
-</div>
+<table class="challenge-table">
+  <thead>
+    <tr>
+      <th class="row-name">Nombre</th>
+      <th class="row-age">Edad</th>
+      <th class="row-email">E-mail</th>
+      <th class="row-actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="client in $ctrl.clients">
+      <td>{{ client.name }}</td>
+      <td>{{ client.age }}</td>
+      <td>{{ client.email }}</td>
+      <td>
+        <ng-form name="deleteClient">
+          <input type="hidden" name="id" value="{{ client.id }}">
+          <button ng-click="$ctrl.deleteClient({ id: client.id })" class="delete-button">
+            <i class="fa fa-trash" aria-hidden="true" alt="Eliminar"></i>
+          </button>
+        </ng-form>
+      </td>
+    </tr>
+  </tbody>
+</table>

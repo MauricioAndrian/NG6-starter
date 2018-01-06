@@ -1,5 +1,5 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
+<div class="challenge">
+  <h1>United Airlines Challenge</h1>
   <c-form new-client-handler="$ctrl.newClientHandler(client)"></c-form>
-  <c-table clients="$ctrl.clients"></c-table>
+  <c-table clients="$ctrl.clients" delete-client="$ctrl.deleteClient(id)"></c-table>
 </div>
