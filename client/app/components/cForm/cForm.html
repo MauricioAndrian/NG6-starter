@@ -1,0 +1,22 @@
+<form name="cForm" novalidate class="challenge-form">
+  <label for="name">Nombre:</label>
+  <input type="text" name="name" id="name" ng-model="$ctrl.client.name" required="" />
+  <ng-messages for="cForm.name.$error" role="alert" class="error-messages" ng-show="cForm.name.$dirty && cForm.name.$touched">
+    <ng-message when="required">Por favor, ingrese el nombre del nuevo cliente.</ng-message>
+  </ng-messages>
+  <label for="age">Edad:</label>
+  <input type="number" name="age" id="age" ng-model="$ctrl.client.age" required="" ng-pattern="/^(\d?[1-9]|[1-9]0)$/" />
+  <ng-messages for="cForm.age.$error" role="alert" class="error-messages" ng-show="cForm.age.$dirty && cForm.age.$touched">
+    <ng-message when="required">Por favor, ingrese la edad del nuevo cliente.</ng-message>
+    <ng-message when="pattern">Por favor, ingrese un número entero para la edad del nuevo cliente.</ng-message>
+  </ng-messages>
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" ng-model="$ctrl.client.email" required="" />
+  <ng-messages for="cForm.email.$error" role="alert" class="error-messages" ng-show="cForm.email.$dirty && cForm.email.$touched">
+    <ng-message when="required">Por favor, ingrese el email del nuevo cliente.</ng-message>
+    <ng-message when="email">Por favor, ingrese un email válido para el nuevo cliente.</ng-message>
+  </ng-messages>
+  <button ng-click="$ctrl.saveNewClient()" class="save-button">Guardar
+    <i class="fa fa-floppy-o" aria-hidden="true" alt="Guardar"></i>
+  </button>
+</form>

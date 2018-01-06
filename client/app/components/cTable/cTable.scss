@@ -1,0 +1,70 @@
+.challenge-table {
+  margin: 0 12.5%;
+  padding: 0.5rem;
+  table-layout: fixed;
+  width: 75%;
+  border-spacing: 0.1rem;
+
+  tbody {
+    tr {
+      background-color: #EEEEEE;
+      transition: 0.25s all ease-in-out;
+
+      &:hover {
+        background-color: #BDBDBD;
+      }
+
+      td {
+        font-size: 1.6rem;
+        padding: 0.25rem;
+        text-align: center;
+
+        .delete-button {
+          background-color: #B71C1C;
+          border-radius: 0.25rem;
+          border: none;
+          color: white;
+          height: 3rem;
+          padding: 0.5rem;
+          transition: 0.25s all ease-in-out;
+          width: 3rem;
+          box-sizing: border-box;
+
+          &:hover {
+            background-color: #E53935;
+          }
+        }
+      }
+    }
+  }
+
+  thead {
+    tr {
+      th {
+        background-color: #424242;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0.5rem;
+        color: white;
+
+        &.row- {
+          &name {
+            width: 35%;
+          }
+          &age {
+            width: 10%;
+          }
+          &email {
+            width: 45%;
+          }
+          &actions {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+
+  
+
+}

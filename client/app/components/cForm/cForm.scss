@@ -1,0 +1,55 @@
+.challenge-form {
+  width: 50%;
+  margin: 0 auto 4rem auto;
+
+  label {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem #212121 solid;
+    border-radius: 0.25rem;
+    transition: 0.5s all ease-in-out;
+
+    &.ng-invalid.ng-touched.ng-dirty {
+      border-color: #F44336;
+    }
+  }
+
+  .error-messages {
+    display: block;
+    color: #F44336;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+
+    &.ng-hide:not(.ng-hide-animate) {
+      display: block !important;
+      opacity: 0;
+    }
+  }
+
+  .save-button {
+    transition: 0.25s all ease-in-out;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-size: 1.4rem;
+    margin-left: auto;
+    display: block;
+
+    &:hover {
+      background-color: #81C784;
+    }
+  }
+}
