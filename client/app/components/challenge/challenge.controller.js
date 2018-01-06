@@ -2,10 +2,11 @@ class ChallengeController {
   constructor() {
     this.clients = [
       { id: 0, name: 'Mauricio Andrian', age: '26', email: 'andrian.mauricio@gmail.com' },
-      { id: 1, name: 'Matías Villanueva', age: '28', email: 'matiasvillanuevar@gmail.com' },
-      { id: 2, name: 'Raava Villanueva', age: '2', email: 'raavaloca@gmail.com' }
+      { id: 1, name: 'Jhon Smith', age: '28', email: 'jhonsmith@gmail.com' },
+      { id: 2, name: 'Roger Moore', age: '35', email: 'rogermoore@gmail.com' },
+      { id: 3, name: 'Donald Trump', age: '152', email: 'donaldthetrumpet@gmail.com' }
     ];
-    this.lastId = 2;
+    this.lastId = 3;
   }
 
   newClientHandler(client) {
